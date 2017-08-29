@@ -126,10 +126,6 @@ static void *get_cpu_dbs_info_s(int cpu)				\
  * cdbs: common dbs
  * od_*: On-demand governor
  * cs_*: Conservative governor
-<<<<<<< HEAD
-=======
- * dk_*: Darkness governor
->>>>>>> 7473fa7... ElementalX governor version 2
  * ex_*: ElementalX governor
  */
 
@@ -174,14 +170,6 @@ struct cs_cpu_dbs_info_s {
 	unsigned int enable:1;
 };
 
-<<<<<<< HEAD
-=======
-struct dk_cpu_dbs_info_s {
-	struct cpu_dbs_common_info cdbs;
-	struct cpufreq_frequency_table *freq_table;
-};
-
->>>>>>> 7473fa7... ElementalX governor version 2
 struct ex_cpu_dbs_info_s {
 	struct cpu_dbs_common_info cdbs;
 	unsigned int down_floor;
@@ -207,13 +195,6 @@ struct cs_dbs_tuners {
 	unsigned int freq_step;
 };
 
-<<<<<<< HEAD
-=======
-struct dk_dbs_tuners {
-	unsigned int ignore_nice_load;
-	unsigned int sampling_rate;
-};
->>>>>>> 7473fa7... ElementalX governor version 2
 struct ex_dbs_tuners {
 	unsigned int ignore_nice_load;
 	unsigned int sampling_rate;
@@ -232,10 +213,6 @@ struct common_dbs_data {
 	/* Common across governors */
 	#define GOV_ONDEMAND		0
 	#define GOV_CONSERVATIVE	1
-<<<<<<< HEAD
-=======
-	#define GOV_DARKNESS		3
->>>>>>> 7473fa7... ElementalX governor version 2
 	#define GOV_ELEMENTALX		2
 	int governor;
 	struct attribute_group *attr_group_gov_sys; /* one governor - system */
